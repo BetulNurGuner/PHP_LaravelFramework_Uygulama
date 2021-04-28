@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class App extends Controller
+{
+    public function index()
+    {
+        return "anasayfa";  //Anasayfa için metodum
+    }
+    public function hakkimizda()
+    {
+        return "hakkimizda";  //hakkimizda için metodum
+    }
+}
