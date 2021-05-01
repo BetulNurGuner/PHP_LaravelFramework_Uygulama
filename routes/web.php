@@ -13,9 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//  1.YOL
+//Route::get('/', function () {
+//    return view('anasayfa');
+//}); 
+//varsayılan welcome.blade e gidiyordu ama ben anasayfa.blade oluşturup kullandım.
+
+//2.YOL
+Route::get('/','App\Http\Controllers\App@index');
+//1.yolla aynı sonucu verdi App.php içindeki index metodunda return view yaptık.
+
 
 Route::get('/anasayfa','App\Http\Controllers\App@index');
 Route::get('/hakkimizda','App\Http\Controllers\App@hakkimizda');
