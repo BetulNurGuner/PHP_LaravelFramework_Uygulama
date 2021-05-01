@@ -16,7 +16,14 @@ class App extends Controller
         //$data['ad']="Betül...";  //2.YOL
         //return view('sayfalar.anasayfa', $data); //2.YOL
 
-        return view('sayfalar.anasayfa')->with('ad', 'Betül.'); //3.YOL
+        //return view('sayfalar.anasayfa')->with('ad', 'Betül.'); //3.YOL
+        
+        //BladeTemplate Foreach kullanımı
+        $data['isimler']=['Betül', 'Furkan', 'Ahmet', 'Mert'];
+        $data['blog']="<b>Kalın Yazı</b>";
+        return view('sayfalar.anasayfa',$data);
+    
+    
     }
 
     public function hakkimizda()
