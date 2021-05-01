@@ -24,7 +24,7 @@
         -->
     
     
-    @if(2>0) 2 büyüktür 0
+    @if(2>0) 2 büyüktür 0!
     @elseif(2<0) 2 küçüktür 0
     @else Hiçbiri
     @endif
