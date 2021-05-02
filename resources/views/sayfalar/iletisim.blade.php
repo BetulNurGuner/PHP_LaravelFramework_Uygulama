@@ -1,4 +1,3 @@
 <h2>İletisim Sayfam İnclude Edildi!</h2>
- <p>İletişim sayfama gönderilen veri : {{ $veri }}</p>
+ <p>İletişim sayfama gönderilen veri : {{ $ad }}</p>
 
-<h3>{{ $ad }}</h3>
