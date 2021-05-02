@@ -17,6 +17,17 @@ class Deneme extends Controller
         return "haberler index metodundan çekilerek gösteriliyor";
     }
 
+    public function kitapMetod($slug,$yil,$tur=null)
+    {
+         return $slug.'-'.$yil.'-'.$tur;
+        #return view('sayfalar.anasayfa');
+    }
+
+    public function kitap($ad=null)
+    {
+        return $ad;
+    }
+
     /**
      * Show the form for creating a new resource.
      *
