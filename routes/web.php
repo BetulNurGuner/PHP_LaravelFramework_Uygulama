@@ -18,7 +18,6 @@ use Illuminate\Support\Facades\Route;
 //    return view('anasayfa');
 //}); 
 //varsayılan welcome.blade e gidiyordu ama ben anasayfa.blade oluşturup kullandım.
-
 //2.YOL
 Route::get('/','App\Http\Controllers\App@index');
 //1.yolla aynı sonucu verdi App.php içindeki index metodunda return view yaptık.
@@ -73,3 +72,7 @@ Route::view('sonOrnek', 'welcome');
 //localhost:8000/sonOrnek
 
 Route::view('/profilim','sayfalar.iletisim',['ad'=>'Betül']);
+
+
+Route::get('/iletisim','App\Http\Controllers\RequestDeneme@iletisim');
+Route::post('/iletisim/post','App\Http\Controllers\RequestDeneme@post')->name('iletisim.post');
