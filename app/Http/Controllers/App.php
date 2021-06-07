@@ -31,5 +31,6 @@ class App extends Controller
     {
         //return "hakkimizda";  //hakkimizda için metodum
         return view('sayfalar.anasayfa');
+        
     }
 }

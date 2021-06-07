@@ -76,3 +76,6 @@ Route::view('/profilim','sayfalar.iletisim',['ad'=>'Betül']);
 
 Route::get('/iletisim','App\Http\Controllers\RequestDeneme@iletisim');
 Route::post('/iletisim/post','App\Http\Controllers\RequestDeneme@post')->name('iletisim.post');
+
+Route::get('/kayit','App\Http\Controllers\ValidationDersi@index');
+Route::post('/kayit-ol','App\Http\Controllers\ValidationDersi@post')->name('kayit.post');
