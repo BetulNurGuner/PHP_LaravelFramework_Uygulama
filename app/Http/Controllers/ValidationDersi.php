@@ -17,9 +17,10 @@ class ValidationDersi extends Controller
 
         $request->validate([
             'ad'=>'required | min:3',
-            'email'=>'required | email'
+            'email'=>'required | email',
             #required=zorunlu, ad min 3 harf, email formatında olsun
             #bu şartlar sağlanırsa kuralı geçti yazar yoksa tekrardan form sayfasına yönlendirilir
+            'sifre' => 'required | min:4 |confirmed'
         ]);
         echo "Kuralları geçti";
        

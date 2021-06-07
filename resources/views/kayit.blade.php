@@ -25,7 +25,7 @@
        <label>Şifre</label>
        <input type="text" name="sifre"/><br/>
        <label>Şifre Tekrar</label>
-       <input type="text" name="sifre2"/><br/>
+       <input type="text" name="sifre_confirmation"/><br/>
        <button type="submit">Kayıt Ol</button>
 
    </form>
