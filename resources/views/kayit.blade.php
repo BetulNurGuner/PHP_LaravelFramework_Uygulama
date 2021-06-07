@@ -17,11 +17,11 @@
    <form method="POST" action="{{ route('kayit.post') }}">
     @csrf <!--formdan get-post metodu ile işlem varsa laravelde bunu kesin kullan, blade olmasa csrf_field çağırarak bunu yap--> 
        <label>Ad Soyad</label>
-       <input type="text" name="ad"/><br/>
+       <input type="text" name="ad" value="{{ old('ad') }}"/><br/>
        <label>Kullanıcı Adı</label>
-       <input type="text" name="kullanici_adi"/><br/>
+       <input type="text" name="kullanici_adi" value="{{ old('kullanici_adi') }}"/><br/>
        <label>E-Mail</label>
-       <input type="text" name="email"/><br/>
+       <input type="text" name="email" value="{{ old('email') }}"/><br/>
        <label>Şifre</label>
        <input type="text" name="sifre"/><br/>
        <label>Şifre Tekrar</label>
