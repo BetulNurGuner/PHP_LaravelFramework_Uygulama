@@ -14,15 +14,16 @@ class ValidationDersi extends Controller
     {
         #print_r dizileri yazdırmak için, echo ve print ile dizi yazdırılamaz. 
         #print_r($request->post());
-
-        $request->validate([
-            'ad'=>'required | min:3',
-            'email'=>'required | email',
-            #required=zorunlu, ad min 3 harf, email formatında olsun
-            #bu şartlar sağlanırsa kuralı geçti yazar yoksa tekrardan form sayfasına yönlendirilir
-            'sifre' => 'required | min:4 |confirmed'
-        ]);
-        echo "Kuralları geçti";
+        $post = $request->post();
+        printf($post);
+        #$request->validate([
+        #    'ad'=>'required | min:3',
+        #    'email'=>'required | email',
+        #    #required=zorunlu, ad min 3 harf, email formatında olsun
+        #    #bu şartlar sağlanırsa kuralı geçti yazar yoksa tekrardan form sayfasına yönlendirilir
+        #    'sifre' => 'required | min:4 |confirmed'
+        #]);
+        #echo "Kuralları geçti";
        
     }
 }

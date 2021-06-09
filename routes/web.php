@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+//use App\Http\Middleware\kotuKelimeYakala;   //Middleware tanımlamaası ama kernel.php ye tanımladım,artık gerek yok.
 
 /*
 |--------------------------------------------------------------------------
@@ -48,6 +49,7 @@ Route::get('/kitapDetay/{ad}','App\Http\Controllers\Deneme@kitap')->name('kitap'
 
 //Route grubu oluşturacağım prefix ile
 //Örnegin "/elektronik/telefon---elektronik/laptop/---elektronik/kamera" gibi durumda elektronik sabit diğer parametreler değişken
+
 Route::prefix('elektronik')->group(function(){
     Route::get('telefon', function(){
         return "telefon";
@@ -77,5 +79,11 @@ Route::view('/profilim','sayfalar.iletisim',['ad'=>'Betül']);
 Route::get('/iletisim','App\Http\Controllers\RequestDeneme@iletisim');
 Route::post('/iletisim/post','App\Http\Controllers\RequestDeneme@post')->name('iletisim.post');
 
+//Route::get('/kayit','App\Http\Controllers\ValidationDersi@index')->middleware(kotuKelimeYakala::class);
+//MİDDLEWARE KULLANİLDİİİİ kotuKelimeYakala ama manuel yukarıda use kullanılırsa, kernel.php ye eklemeden once tanımı
+
+//Route::get('/kayit','App\Http\Controllers\ValidationDersi@index')->middleware('kotu');
+//kernel.php de tanımladım kotu'nun kotuKelimeYakala middleware'ini gösterdiğini
+
 Route::get('/kayit','App\Http\Controllers\ValidationDersi@index');
-Route::post('/kayit-ol','App\Http\Controllers\ValidationDersi@post')->name('kayit.post');
+Route::post('/kayit-ol','App\Http\Controllers\ValidationDersi@post')->middleware('kotu')->name('kayit.post');
